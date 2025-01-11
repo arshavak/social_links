@@ -1,97 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Links</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Responsive Animated Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <style>
-/* Global Styles */
+    /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f3f3f3;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  text-align: center;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #333;
+    background-color: #F5EBE0;
+    margin: 0;
 }
 
-header.header {
-  background: linear-gradient(90deg, #4b6cb7, #182848);
-  color: #fff;
-  padding: 50px 20px;
+header {
+    background: #F5EBE0;
+    color: #333;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top:0;
 }
 
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
 }
 
-header p {
-  font-size: 1.2rem;
+.nav-links li {
+    margin: 0 15px;
 }
 
-.social-links {
-  margin: 50px 20px;
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-.btn {
-  display: inline-block;
-  margin: 10px;
-  padding: 15px 30px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.nav-links a:hover {
+    color: #695900;
 }
 
-/* Button Colors */
-.facebook { background-color: #3b5998; }
-.youtube { background-color: #FF0000; }
-.whatsapp { background-color: #25D366; }
-.instagram { background-color: #C13584; }
-.telegram { background-color: #0088cc; }
-.github { background-color: #333; }
-
-/* Button Hover Effects */
-.btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.hero {
+    margin-top: 80px;
+    text-align: center;
+    padding: 20px;
+    background: #034c61;
+    color: white;
 }
 
-/* Footer */
-footer.footer {
-  background-color: #222;
-  color: #fff;
-  padding: 10px 0;
-  margin-top: 30px;
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
 }
+
+.quote-box {
+    background: #fff;
+    padding: 15px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 60%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #3b3300;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.project-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project h3 {
+    color: #034c61;
+    margin-bottom: 10px;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    background: #034c61;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.project a:hover {
+    background: #034c61;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #0801dc;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 </style>
 <body>
-  <header class="header">
-    <h1>मम सञ्जालानां सूची</h1>
-    <p>You can connect me on your favorite platforms!</p>
-  </header>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main class="social-links">
-    <a href="https://www.facebook.com/profile.php?id=100043011377891&mibextid=kFxxJD" target="_blank" class="btn facebook">फेसबुक</a>
-    <a href="https://www.youtube.com/@dilipadhikari01" target="_blank" class="btn youtube">यूट्युब</a>
+    <section id="home">
+        <div class="hero">
+            <img src="ful.jpg" alt="Your Photo" class="profile-photo">
+            <h1>Welcome to My Website</h1>
+            <p>Hello! I am Dilip Adhikari, "A mind engaged in good deeds is always content. This website presents a description of some of my works."</p>
+            <div class="quote-box">
+                <p id="quote">Loading inspirational quote...</p>
+            </div>
+        </div>
+    </section>
 
-<hr><hr>
-<h3>Some apps created by me.<h3/>
-    <a href="https://dilip-adhikari01.github.io/suryanamaskar/" target="_blank" class="btn whatsapp">सूर्यनमस्कारः</a>
-    <a href="https://dilip-adhikari01.github.io/pingala_chhand_shastram/" target="_blank" class="instagram btn">छन्दोविवरणम्</a>
-    <a href="https://dilip-adhikari01.github.io/shabdroop_creator/" target="_blank" class="btn github">Shadbroop Creator</a>
-    <a href="https://dilip-adhikari01.github.io/vishnu-sahasranam/" target="_blank" class="btn github">विष्णुसहस्रनाम</a>
-    <a href="https://dilip-adhikari01.github.io/bhagavadgita/" target="_blank" class="btn github">गीता की व्याख्याएं</a>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>This section provides a brief introduction about myself and my journey as a developer.</p>
+    </section>
 
-  </main>
+    <section id="projects">
+        <h2>GitHub Projects</h2>
+        <div class="project-links">
+            <div class="project">
+                <h3>Project 1: Bhagavad Gita</h3>
+                <p>A basic Gita app With many commentrise.</p>
+                <a href="https://dilip-adhikari01.github.io/bhagavadgita/" target="_blank">View on Browser</a>
+            </div>
+            <div class="project">
+                <h3>Project 2: Vishnu Sahasranam</h3>
+                <p>An application that provides vishnu-sahasranam stotra With chanting.</p>
+                <a href="https://dilip-adhikari01.github.io/vishnu-sahasranam/" target="_blank">View on Browser</a>
+            </div>
+            <div class="project">
+                <h3>Project 3: Shabdroop Creator</h3>
+                <p>An application for creating 7 forms of samskrit Words.</p>
+                <a href="https://dilip-adhikari01.github.io/shabdroop_creator/" target="_blank">View on Browser</a>
+            </div>
+        </div>
+    </section>
 
-  <footer class="footer">
-    <p>&copy; 2024 My Social Links | All Rights Reserved</p>
-  </footer>
+    <section id="videos">
+        <h2>YouTube Videos</h2>
+        <ul>
+            <li><a href="https://youtube.com/example-video1" target="_blank">How to Build a Website</a></li>
+            <li><a href="https://youtube.com/example-video2" target="_blank">JavaScript Basics</a></li>
+        </ul>
+    </section>
+
+    <section id="books">
+        <h2>My Favorite Books</h2>
+        <ul>
+            <li><strong>The Pragmatic Programmer</strong> by Andrew Hunt and David Thomas</li>
+            <li><strong>Clean Code</strong> by Robert C. Martin</li>
+            <li><strong>Introduction to Algorithms</strong> by Thomas H. Cormen</li>
+        </ul>
+    </section>
+
+    <section id="resources">
+        <h2>Important Websites</h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a> - A great resource for web developers.</li>
+            <li><a href="https://stackoverflow.com" target="_blank">Stack Overflow</a> - A Q&A site for coding questions.</li>
+            <li><a href="https://w3schools.com" target="_blank">W3Schools</a> - Tutorials for beginners.</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out via email.</p>
+        <a href="mailto:arshavak.dilip@gmail.com">Send Email</a>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year">2024</span> My Social Links | All Rights Reserved</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100043011377891&mibextid=kFxxJD" target="_blank">Facebook</a> |
+            <a href="https://www.youtube.com/@dilipadhikari01" target="_blank">Youtube</a> |
+            <!-- <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> | -->
+            <a href="https://github.com/dilip-adhikari01" target="_blank">GitHub</a>
+        </div>
+    </footer>
+
+    <script>
+        // script.js
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Animation effect for hero image
+document.addEventListener('DOMContentLoaded', () => {
+    const profilePhoto = document.querySelector('.profile-photo');
+    profilePhoto.style.transition = 'transform 0.5s ease';
+    profilePhoto.style.transform = 'scale(1.2)';
+
+    setTimeout(() => {
+        profilePhoto.style.transform = 'scale(1)';
+    }, 500);
+});
+
+// Rotating quotes in the quote-box
+const quotes = [
+    "The only limit to our realization of tomorrow is our doubts of today.",
+    "Success is not the key to happiness. Happiness is the key to success.",
+    "Do what you can, with what you have, where you are.",
+    "In the middle of every difficulty lies opportunity.",
+    "Your time is limited, don't waste it living someone else's life."
+];
+
+function updateQuote() {
+    const quoteBox = document.getElementById('quote');
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    quoteBox.textContent = `"${quotes[randomIndex]}"`;
+}
+
+// Initial quote and hourly update
+updateQuote();
+setInterval(updateQuote, 36000);
+
+
+const year = document.getElementById("year");
+year.textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
